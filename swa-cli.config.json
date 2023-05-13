@@ -1,0 +1,18 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "bootstrap-startup-app": {
+      "appLocation": "src\\Client",
+      "apiLocation": "src\\Api",
+      "outputLocation": "bin\\wwwroot",
+      "apiLanguage": "dotnetisolated",
+      "apiVersion": "6.0",
+      "appBuildCommand": "dotnet publish -c Release -o bin",
+      "apiBuildCommand": "dotnet publish -c Release",
+      "run": "dotnet watch run",
+      "appDevserverUrl": "http://localhost:5065",
+      "appName": "bootstrap-startup-app",
+      "resourceGroup": "bootstrap-startup-app-rg"
+    }
+  }
+}
