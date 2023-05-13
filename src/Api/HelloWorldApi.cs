@@ -1,8 +1,8 @@
+using GSN.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
-using System.Net;
 
 namespace Api;
 
@@ -21,23 +21,24 @@ public class HelloWorldApi
     {
         _logger.LogInformation($"{nameof(HelloWorldGet)} function processed a request.");
 
-        var response = req.CreateResponse(HttpStatusCode.OK);
-
-        var weather = new WeatherForecast
+        var weather1 = new WeatherForecast
         {
+            Id = 1,
             Date = DateOnly.FromDateTime(DateTime.UtcNow),
             TemperatureC = 32,
             Summary = "Bright sunny day"
         };
 
-        return new OkObjectResult(weather);
-    }
+        var weather2 = new WeatherForecast
+        {
+            Id = 2,
+            Date = DateOnly.FromDateTime(DateTime.UtcNow.AddDays(1)),
+            TemperatureC = 32,
+            Summary = "Rainy day"
+        };
 
-    public class WeatherForecast
-    {
-        public DateOnly Date { get; set; }
-        public int TemperatureC { get; set; }
-        public string? Summary { get; set; }
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        var weatherForecasts = new List<WeatherForecast> { weather1, weather2 };
+
+        return new OkObjectResult(weatherForecasts);
     }
 }
