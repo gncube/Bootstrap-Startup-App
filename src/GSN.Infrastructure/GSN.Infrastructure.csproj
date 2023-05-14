@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GSN.Application\GSN.Application.csproj" />
+    <ProjectReference Include="..\GSN.Domain\GSN.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

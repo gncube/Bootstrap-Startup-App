@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\Api\Api.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSN.Domain", "src\GSN.Domain\GSN.Domain.csproj", "{F3D0D1AD-336C-4173-A2BD-2E5F0FB5B112}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSN.Application", "src\GSN.Application\GSN.Application.csproj", "{1FC54ED6-4EDB-4B59-956F-4D01F86427A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSN.Infrastructure", "src\GSN.Infrastructure\GSN.Infrastructure.csproj", "{BDF9D45F-00E8-430B-A299-E5FE0A7BD285}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{F3D0D1AD-336C-4173-A2BD-2E5F0FB5B112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3D0D1AD-336C-4173-A2BD-2E5F0FB5B112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3D0D1AD-336C-4173-A2BD-2E5F0FB5B112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC54ED6-4EDB-4B59-956F-4D01F86427A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC54ED6-4EDB-4B59-956F-4D01F86427A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC54ED6-4EDB-4B59-956F-4D01F86427A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC54ED6-4EDB-4B59-956F-4D01F86427A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF9D45F-00E8-430B-A299-E5FE0A7BD285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF9D45F-00E8-430B-A299-E5FE0A7BD285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF9D45F-00E8-430B-A299-E5FE0A7BD285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF9D45F-00E8-430B-A299-E5FE0A7BD285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

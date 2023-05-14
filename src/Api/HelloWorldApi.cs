@@ -1,18 +1,24 @@
+using GSN.Application;
 using GSN.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
+using System.Text.Json;
 
 namespace Api;
 
 public class HelloWorldApi
 {
     private readonly ILogger _logger;
+    private readonly IRepository<WeatherForecast, int> _repo;
+    private readonly JsonSerializerOptions _jsonSerializerOptions;
 
-    public HelloWorldApi(ILoggerFactory loggerFactory)
+    public HelloWorldApi(ILoggerFactory loggerFactory, IRepository<WeatherForecast, int> repo, JsonSerializerOptions jsonSerializerOptions)
     {
         _logger = loggerFactory.CreateLogger<HelloWorldApi>();
+        _repo = repo;
+        _jsonSerializerOptions = jsonSerializerOptions;
     }
 
     [Function(nameof(HelloWorldGet))]
@@ -21,24 +27,7 @@ public class HelloWorldApi
     {
         _logger.LogInformation($"{nameof(HelloWorldGet)} function processed a request.");
 
-        var weather1 = new WeatherForecast
-        {
-            Id = 1,
-            Date = DateOnly.FromDateTime(DateTime.UtcNow),
-            TemperatureC = 32,
-            Summary = "Bright sunny day"
-        };
-
-        var weather2 = new WeatherForecast
-        {
-            Id = 2,
-            Date = DateOnly.FromDateTime(DateTime.UtcNow.AddDays(1)),
-            TemperatureC = 32,
-            Summary = "Rainy day"
-        };
-
-        var weatherForecasts = new List<WeatherForecast> { weather1, weather2 };
-
+        var weatherForecasts = await _repo.GetAllAsync();
         return new OkObjectResult(weatherForecasts);
     }
 }
