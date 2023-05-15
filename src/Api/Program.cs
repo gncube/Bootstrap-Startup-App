@@ -11,12 +11,9 @@ var host = new HostBuilder()
     .ConfigureFunctionsWorkerDefaults()
     .ConfigureServices(services =>
     {
-        //services.AddDbContextFactory<AppDbContext>(options =>
-        //    options.UseSqlite("Data Source=BootstrapStartup.db"));
-
         services.AddScoped<AppDbContext>(svc =>
         {
-            var options = new DbContextOptionsBuilder<AppDbContext>().UseSqlite("Data Source=BootstrapStartup.db");
+            var options = new DbContextOptionsBuilder<AppDbContext>().UseSqlite("Data Source=BootstrapStartup.sqlite");
             return new AppDbContext(options.Options);
         });
 

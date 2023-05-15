@@ -26,7 +26,7 @@
     <ProjectReference Include="..\GSN.Infrastructure\GSN.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="BootstrapStartup.db">
+    <None Update="BootstrapStartup.sqlite">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="host.json">
