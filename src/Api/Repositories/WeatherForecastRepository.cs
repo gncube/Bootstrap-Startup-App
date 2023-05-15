@@ -1,15 +1,13 @@
-﻿using Api.Repositories;
-using GSN.Application;
+﻿using GSN.Application;
 using GSN.Domain;
-using Microsoft.EntityFrameworkCore;
 
-namespace Api;
+namespace Api.Repositories;
 internal class WeatherForecastRepository : Repository<WeatherForecast, int>, IWeatherForecastRepository
 {
-    private readonly IDbContextFactory<AppDbContext> _contextFactory;
+    private readonly AppDbContext _context;
 
-    public WeatherForecastRepository(IDbContextFactory<AppDbContext> contextFactory) : base(contextFactory)
+    public WeatherForecastRepository(AppDbContext context) : base(context)
     {
-        _contextFactory = contextFactory;
+        _context = context;
     }
 }
