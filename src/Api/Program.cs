@@ -26,6 +26,7 @@ var host = new HostBuilder()
         });
 
         services.AddScoped<IRepository<WeatherForecast, int>, WeatherForecastRepository>();
+        services.AddScoped<IBlogRepository, BlogRepository>();
 
     })
     .Build();

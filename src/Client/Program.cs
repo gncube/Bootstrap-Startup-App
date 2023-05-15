@@ -10,10 +10,12 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["API_Prefix"] ?? builder.HostEnvironment.BaseAddress) });
+// Register HttpClient service using HttpClientFactory
+builder.Services.AddHttpClient<IBlogDataService, BlogDataService>(
+       bds => bds.BaseAddress = new Uri(builder.Configuration["API_Prefix"] ?? builder.HostEnvironment.BaseAddress));
 
-// Register services
-builder.Services.AddScoped<IDataService<WeatherForecast, int>, WeatherService>();
+builder.Services.AddHttpClient<IDataService<WeatherForecast, int>, WeatherService>(
+    ws => ws.BaseAddress = new Uri(builder.Configuration["WeatherAPI_Prefix"] ?? builder.HostEnvironment.BaseAddress));
 
 // Add JsonSerilizerOptions service
 builder.Services.AddSingleton(x => new JsonSerializerOptions

@@ -5,13 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "src\Client\Client.csproj", "{F6DDF80C-A1FB-44B8-A775-21DBCCC3D036}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\Api\Api.csproj", "{49D9C7C5-38BC-4218-A1CC-3DFE8BEE4528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{49D9C7C5-38BC-4218-A1CC-3DFE8BEE4528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSN.Domain", "src\GSN.Domain\GSN.Domain.csproj", "{F3D0D1AD-336C-4173-A2BD-2E5F0FB5B112}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSN.Domain", "src\GSN.Domain\GSN.Domain.csproj", "{F3D0D1AD-336C-4173-A2BD-2E5F0FB5B112}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSN.Application", "src\GSN.Application\GSN.Application.csproj", "{1FC54ED6-4EDB-4B59-956F-4D01F86427A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSN.Application", "src\GSN.Application\GSN.Application.csproj", "{1FC54ED6-4EDB-4B59-956F-4D01F86427A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSN.Infrastructure", "src\GSN.Infrastructure\GSN.Infrastructure.csproj", "{BDF9D45F-00E8-430B-A299-E5FE0A7BD285}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GSN.Infrastructure", "src\GSN.Infrastructure\GSN.Infrastructure.csproj", "{BDF9D45F-00E8-430B-A299-E5FE0A7BD285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
