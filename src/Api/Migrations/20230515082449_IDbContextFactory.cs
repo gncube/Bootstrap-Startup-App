@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Api.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialSetup : Migration
+    public partial class IDbContextFactory : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,7 +29,7 @@ namespace Api.Migrations
             migrationBuilder.InsertData(
                 table: "WeatherForecasts",
                 columns: new[] { "Id", "Date", "Summary", "TemperatureC" },
-                values: new object[] { 1, new DateOnly(2023, 5, 14), "Bright sunny day", 32 });
+                values: new object[] { 1, new DateOnly(2023, 5, 15), "Bright sunny day", 32 });
         }
 
         /// <inheritdoc />

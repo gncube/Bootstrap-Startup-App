@@ -40,7 +40,7 @@ namespace Api.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateOnly(2023, 5, 14),
+                            Date = new DateOnly(2023, 5, 15),
                             Summary = "Bright sunny day",
                             TemperatureC = 32
                         });

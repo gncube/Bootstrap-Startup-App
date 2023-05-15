@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230514002250_InitialSetup")]
-    partial class InitialSetup
+    [Migration("20230515082449_IDbContextFactory")]
+    partial class IDbContextFactory
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,7 +43,7 @@ namespace Api.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateOnly(2023, 5, 14),
+                            Date = new DateOnly(2023, 5, 15),
                             Summary = "Bright sunny day",
                             TemperatureC = 32
                         });

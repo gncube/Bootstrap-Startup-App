@@ -10,7 +10,7 @@ var host = new HostBuilder()
     .ConfigureFunctionsWorkerDefaults()
     .ConfigureServices(services =>
     {
-        services.AddDbContext<AppDbContext>(options =>
+        services.AddDbContextFactory<AppDbContext>(options =>
             options.UseSqlite("Data Source=BootstrapStartup.db"));
 
         services.AddSingleton(x => new JsonSerializerOptions
