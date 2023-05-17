@@ -1,0 +1,59 @@
+﻿@page "/blogs"
+@page "/blogoverview"
+@inject HttpClient http
+@inject NavigationManager navigation
+
+<PageTitle>Blog Overview</PageTitle>
+
+<div class="container g-pt-50 g-pb-20">
+
+    @if (Blogs == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <QuickViewPopup Blog="_selectedBlog"></QuickViewPopup>
+        <div class="row justify-content-between">
+            <div class="col-lg-12 g-mb-80">
+                <div class="g-pr-20--lg">
+                    <!-- Blog Minimal Blocks -->
+                    @foreach (var blog in Blogs)
+                    {
+                        <BlogCard Blog="blog" BlogQuickViewClicked="ShowQuickViewPopup"></BlogCard>
+                    }
+                    <!-- End Blog Minimal Blocks -->
+                    <!-- Pagination -->
+                    <nav id="stickyblock-end" class="text-center" aria-label="Page Navigation">
+                        <ul class="list-inline">
+                            <li class="list-inline-item float-left g-hidden-xs-down">
+                                <a class="u-pagination-v1__item u-pagination-v1-4 g-brd-gray-light-v3 g-brd-primary--hover g-rounded-50 g-pa-7-16" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">
+                                        <i class="fa fa-angle-left g-mr-5"></i> Previous
+                                    </span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="u-pagination-v1__item u-pagination-v1-4 u-pagination-v1-4--active g-rounded-50 g-pa-7-14" href="#">1</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="u-pagination-v1__item u-pagination-v1-4 g-rounded-50 g-pa-7-14" href="#">2</a>
+                            </li>
+                            <li class="list-inline-item float-right g-hidden-xs-down">
+                                <a class="u-pagination-v1__item u-pagination-v1-4 g-brd-gray-light-v3 g-brd-primary--hover g-rounded-50 g-pa-7-16" href="#" aria-label="Next">
+                                    <span aria-hidden="true">
+                                        Next <i class="fa fa-angle-right g-ml-5"></i>
+                                    </span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- End Pagination -->
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

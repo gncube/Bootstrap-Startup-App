@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,10 +7,191 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.5" />
+    <_ContentIncludedByDefault Remove="staticwebapp.config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\img\preloaders\preloader-black.svg" />
+    <None Include="wwwroot\assets\img\preloaders\preloader-white.svg" />
+    <None Include="wwwroot\assets\js\components\gmap\hs.map.js" />
+    <None Include="wwwroot\assets\js\components\hs.ajax-autocomplete.js" />
+    <None Include="wwwroot\assets\js\components\hs.autocomplete-local-search.js" />
+    <None Include="wwwroot\assets\js\components\hs.autocomplete.js" />
+    <None Include="wwwroot\assets\js\components\hs.bg-video.js" />
+    <None Include="wwwroot\assets\js\components\hs.carousel.js" />
+    <None Include="wwwroot\assets\js\components\hs.chart-pie.js" />
+    <None Include="wwwroot\assets\js\components\hs.chart.js" />
+    <None Include="wwwroot\assets\js\components\hs.count-qty.js" />
+    <None Include="wwwroot\assets\js\components\hs.countdown.js" />
+    <None Include="wwwroot\assets\js\components\hs.counter.js" />
+    <None Include="wwwroot\assets\js\components\hs.cubeportfolio.js" />
+    <None Include="wwwroot\assets\js\components\hs.datepicker-1.0.js" />
+    <None Include="wwwroot\assets\js\components\hs.datepicker.js" />
+    <None Include="wwwroot\assets\js\components\hs.dropdown-old.js" />
+    <None Include="wwwroot\assets\js\components\hs.dropdown.js" />
+    <None Include="wwwroot\assets\js\components\hs.file-attachement.js" />
+    <None Include="wwwroot\assets\js\components\hs.go-to.js" />
+    <None Include="wwwroot\assets\js\components\hs.header-fullscreen.js" />
+    <None Include="wwwroot\assets\js\components\hs.header-new.js" />
+    <None Include="wwwroot\assets\js\components\hs.header-side.js" />
+    <None Include="wwwroot\assets\js\components\hs.header.js" />
+    <None Include="wwwroot\assets\js\components\hs.map.pin.js" />
+    <None Include="wwwroot\assets\js\components\hs.map.svg.js" />
+    <None Include="wwwroot\assets\js\components\hs.markup-copy.js" />
+    <None Include="wwwroot\assets\js\components\hs.masked-input.js" />
+    <None Include="wwwroot\assets\js\components\hs.modal-event.js" />
+    <None Include="wwwroot\assets\js\components\hs.modal-window.js" />
+    <None Include="wwwroot\assets\js\components\hs.navigation.js" />
+    <None Include="wwwroot\assets\js\components\hs.nl-form.js" />
+    <None Include="wwwroot\assets\js\components\hs.onscroll-animation.js" />
+    <None Include="wwwroot\assets\js\components\hs.popup-old.js" />
+    <None Include="wwwroot\assets\js\components\hs.popup.js" />
+    <None Include="wwwroot\assets\js\components\hs.progress-bar.js" />
+    <None Include="wwwroot\assets\js\components\hs.rating.js" />
+    <None Include="wwwroot\assets\js\components\hs.scroll-nav.js" />
+    <None Include="wwwroot\assets\js\components\hs.scrollbar.js" />
+    <None Include="wwwroot\assets\js\components\hs.select.js" />
+    <None Include="wwwroot\assets\js\components\hs.slider.js" />
+    <None Include="wwwroot\assets\js\components\hs.smart-menu.js" />
+    <None Include="wwwroot\assets\js\components\hs.step-form.js" />
+    <None Include="wwwroot\assets\js\components\hs.sticky-block.js" />
+    <None Include="wwwroot\assets\js\components\hs.tabs.js" />
+    <None Include="wwwroot\assets\js\components\hs.validation.js" />
+    <None Include="wwwroot\assets\js\components\hs.video-audio.js" />
+    <None Include="wwwroot\assets\js\components\text-animation\hs.text-slideshow.js" />
+    <None Include="wwwroot\assets\js\custom.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.bg-video.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.compressed-form.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.file-attachments.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.focus-state.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.hamburgers.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.height-calc.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.hover-blocks.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.modal-markup.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.navigation-splitted.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.not-empty-state.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.rating.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.selecter.js" />
+    <None Include="wwwroot\assets\js\helpers\hs.shortcode-filter.js" />
+    <None Include="wwwroot\assets\js\hs.core.js" />
+    <None Include="wwwroot\assets\vendor\appear.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\bootstrap.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\bootstrap.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\bootstrap.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\bootstrap.min.js" />
+    <None Include="wwwroot\assets\vendor\bootstrap\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\vendor\bootstrap\offcanvas.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\.sass-cache\1c2a4b3903a0da983c02e18cab56a1978d966d47\dzstooltip.scssc" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\.sass-cache\c37b5345ea7e930042efb4ee1dbcd433d567fae7\basic.scssc" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\.sass-cache\c37b5345ea7e930042efb4ee1dbcd433d567fae7\dzstooltip.scssc" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\advancedscroller\img\closedhand.cur" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\advancedscroller\img\openhand.cur" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\advancedscroller\plugin.css.map" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\advancedscroller\plugin.dev.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\advancedscroller\plugin.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\advancedscroller\plugin.scss" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsparallaxer.css.map" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsparallaxer.dev.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsparallaxer.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsparallaxer.scss" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsprx_module_parallax_features.css.map" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsprx_module_parallax_features.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsprx_module_parallax_features.scss" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\jquery.collagePlus.min.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\jquery.masonry.min.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\scroller.css.map" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\scroller.dev.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\scroller.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\scroller.scss" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\scrollergallery.dev.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\scrollergallery.js" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\scrollergallery.scss" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\styleimg\closedhand.cur" />
+    <None Include="wwwroot\assets\vendor\dzsparallaxer\dzsscroller\styleimg\openhand.cur" />
+    <None Include="wwwroot\assets\vendor\fancybox\jquery.fancybox.js" />
+    <None Include="wwwroot\assets\vendor\fancybox\jquery.fancybox.min.js" />
+    <None Include="wwwroot\assets\vendor\hs-megamenu\src\hs.megamenu.js" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\animated.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\bordered-pulled.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\core.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\fixed-width.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\font-awesome.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\icons.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\larger.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\list.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\mixins.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\path.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\rotated-flipped.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\screen-reader.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\stacked.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\less\variables.less" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\font-awesome.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_animated.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_core.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_fixed-width.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_icons.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_larger.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_list.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_mixins.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_path.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_screen-reader.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_stacked.scss" />
+    <None Include="wwwroot\assets\vendor\icon-awesome\scss\_variables.scss" />
+    <None Include="wwwroot\assets\vendor\icon-hs\fonts\hs-icons.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\christmas\webfont\fonts\cristmas.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\christmas\webfont\SVG - Font\icons.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\clothes\webfont\fonts\clothes.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\communication\webfont\fonts\communication-48-x-48.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\education\webfont\fonts\education-48.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\electronics\webfont\fonts\electronics.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\finance\webfont\fonts\finance.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\food\webfont\fonts\food-48.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\furniture\webfont\fonts\furniture.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\hotel-restaurant\webfont\fonts\hotel-restaurant.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\media\webfont\fonts\media.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\medical\webfont\fonts\medical-and-health.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\music\webfont\fonts\music.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\real-estate\webfont\fonts\real-estate.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\science\webfont\fonts\science.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\sports\webfont\fonts\sports-48-x-48.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\transport\webfont\fonts\transport.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\travel\webfont\fonts\travel.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line-pro\weather\webfont\fonts\weather.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line\fonts\Simple-Line-Icons.svg" />
+    <None Include="wwwroot\assets\vendor\icon-line\fonts\Simple-Line-Icons.woff2" />
+    <None Include="wwwroot\assets\vendor\jquery-migrate\jquery-migrate.min.js" />
+    <None Include="wwwroot\assets\vendor\jquery\jquery.min.js" />
+    <None Include="wwwroot\assets\vendor\popper.js\popper.js" />
+    <None Include="wwwroot\assets\vendor\popper.js\popper.min.js" />
+    <None Include="wwwroot\assets\vendor\popper.js\popper.min.js.map" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\CONTRIBUTING.markdown" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\ISSUE_TEMPLATE.md" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\LICENSE" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\Makefile" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\README.markdown" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\config.rb" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\fonts\slick.svg" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\slick-theme.less" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\slick-theme.scss" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\slick.js" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\slick.less" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\slick.min.js" />
+    <None Include="wwwroot\assets\vendor\slick-carousel\slick\slick.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
+    <PackageReference Include="BlazorStrap" Version="5.1.101" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="7.0.5" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.5" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.4" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.1" />
   </ItemGroup>
 
   <ItemGroup>

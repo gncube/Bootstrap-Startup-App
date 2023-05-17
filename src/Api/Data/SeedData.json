@@ -1,0 +1,29 @@
+{
+  "Value": [
+    {
+      "Id": "2d0616e1-2d14-4bb4-8df8-fe6bb9da1e27",
+      "BlogName": "First blog entry",
+      "Published": false,
+      "CreatedOnDate": "2023-04-09T22:58:10.827742",
+      "Posts": []
+    },
+    {
+      "Id": "91d83594-933f-4718-880b-eb1e829281a1",
+      "BlogName": "Second blog entry",
+      "Published": false,
+      "CreatedOnDate": "2023-04-09T22:58:22.0750753",
+      "Posts": []
+    },
+    {
+      "Id": "778714de-95db-4e6e-9058-21d9338ea4aa",
+      "BlogName": "Third blog entry",
+      "Published": false,
+      "CreatedOnDate": "2023-04-09T22:58:32.2483193",
+      "Posts": []
+    }
+  ],
+  "Formatters": [],
+  "ContentTypes": [],
+  "DeclaredType": null,
+  "StatusCode": 200
+}

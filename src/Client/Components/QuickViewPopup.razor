@@ -1,0 +1,50 @@
+﻿@if(_blog != null)
+{
+    <div class="modal fade show d-block" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleLabel">Blog Quick Add</h5>
+                    <button type="button" class="close btn btn-lg" @onclick="@Close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col row">
+                        <div class="col-12 col-sm-8">
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Blog ID</label>
+                                <div class="col-sm-7">
+                                    <label type="text" class="form-control-plaintext">@_blog.Id</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Blog name</label>
+                                <div class="col-sm-7">
+                                    <label type="text" readonly class="form-control-plaintext">@_blog.BlogName</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Created On Date</label>
+                                <div class="col-sm-7">
+                                    <label type="text" readonly class="form-control-plaintext">@_blog.CreatedOnDate.ToShortDateString()</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label">Published</label>
+                                <div class="col-sm-7">
+                                    <label type="text" readonly class="form-control-plaintext">@_blog.Published</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary" @onclick="@Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

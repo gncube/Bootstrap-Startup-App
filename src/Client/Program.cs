@@ -1,28 +1,29 @@
+using Blazored.LocalStorage;
 using Client;
 using Client.Services;
-using Client.Services.Interfaces;
-using GSN.Domain;
+using Client.State;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Authentication;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using System.Text.Json;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["API_Prefix"] ?? builder.HostEnvironment.BaseAddress) });
+//TODO: builder.HostEnvironment.BaseAddress
+//TODO: builder.Configuration["API_Prefix"] ?? builder.HostEnvironment.BaseAddress
 
-// Register HttpClient service using HttpClientFactory
-builder.Services.AddHttpClient<IBlogDataService, BlogDataService>(client =>
-    client.BaseAddress = new Uri(builder.Configuration["BlogAPI_Prefix"] ?? builder.HostEnvironment.BaseAddress));
+builder.Services.AddHttpClient<IBlogDataService, BlogDataService>(
+    bds => bds.BaseAddress = new Uri(builder.Configuration["API_Prefix"] ?? builder.HostEnvironment.BaseAddress)).AddHttpMessageHandler<BaseAddressAuthorizationMessageHandler>();
+builder.Services.AddScoped<ApplicationState>();
 
-builder.Services.AddHttpClient<IDataService<WeatherForecast, int>, WeatherService>(client =>
-    client.BaseAddress = new Uri(builder.Configuration["WeatherAPI_Prefix"] ?? builder.HostEnvironment.BaseAddress));
+builder.Services.AddBlazoredLocalStorage();
 
-// Add JsonSerilizerOptions service
-builder.Services.AddSingleton(x => new JsonSerializerOptions
+builder.Services.AddOidcAuthentication(options =>
 {
-    PropertyNameCaseInsensitive = true,
+    builder.Configuration.Bind("Auth0", options.ProviderOptions);
+    options.ProviderOptions.ResponseType = "code";
+    options.ProviderOptions.AdditionalProviderParameters.Add("audience", builder.Configuration["Auth0:Audience"]);
 });
 
 await builder.Build().RunAsync();

@@ -1,0 +1,61 @@
+﻿@page "/blogedit"
+@page "/blogedit/{Id}"
+
+@if(!Saved)
+{
+
+    <section class="blog-edit">
+        <h1 class="page-title">Details for @Blog.BlogName</h1>
+
+        <EditForm Model="@Blog" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+
+            <DataAnnotationsValidator/>
+            <ValidationSummary></ValidationSummary>
+        
+            <div class="row mb-3">
+                <label for="blogName" class="col-form-label col-md-3">Blog name:</label>
+                <div class="col-md-8">
+                    <InputText id="blogName" @bind-Value="@Blog.BlogName" class="form-control col-md-8" placeholder="Enter blog name"></InputText>
+                    <ValidationMessage class="offset-md-3 col-md-8" For="@(() => Blog.BlogName)" />
+                </div>
+                
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-8 offset-md-3">
+                    <div class="form-check">
+                        <InputCheckbox id="published" class="form-check-input" @bind-Value="@Blog.Published"></InputCheckbox>
+                        <label class="form-check-label" for="publish">
+                            Published
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="createdondate" class="col-form-label col-md-3">Created On Date: </label>
+                <div class="col-md-8">
+                    <InputDate id="createdondate" class="form-control col-md-8" @bind-Value="@Blog.CreatedOnDate" placeholder="Enter created on date"></InputDate>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary me-1">Save blog</button>
+
+            @if(string.IsNullOrEmpty(Blog.Id))
+            {
+                <button type="button" class="btn btn-danger my-1" @onclick="@DeleteBlog">
+                    Delete
+                </button>
+            }
+
+            <button type="button" class="btn btn-outline-primary ms-1" @onclick="@NavigateToOverview">Back to overview</button>
+
+        </EditForm>
+    </section>
+
+}
+else
+{
+    <div class="alert @StatusClass">@Message</div>
+    <button type="button" class="btn btn-outline-primary" @onclick="@NavigateToOverview">Back to overview</button>
+}
